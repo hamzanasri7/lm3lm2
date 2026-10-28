@@ -1,0 +1,284 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+    width: 100%;
+    height: 100%;
+}
+
+/* En-tête */
+
+.top-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+    background-color:white;
+    position: relative;
+
+}
+
+
+.top-header h2 {
+    font-weight: 500;
+    margin-bottom: 20px;
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    z-index: 1001;
+    align-items: flex-end;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(253, 121, 121);
+    font-weight: 800;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.discover-link {
+    font-size: 25px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+/* Conteneur principal avec le fond rouge texturé */
+.main-container {
+     min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    /* Simulation du fond rouge (remplacer par une image de texture si besoin) */
+    background: #c62828;
+    background-image:linear-gardient(135deg,#d32f2f,#b71c1c);
+
+}
+/* Carte de connexion */
+.login-card {
+    background-color: #f8f9fa;
+    width: 70%;
+    max-width: 60%;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Partie Formulaire (Gauche) */
+.form-section {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-section h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #222;
+    letter-spacing: 1px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.subtitle {
+    color: #777;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #444;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 20px;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #d32f2f;
+}
+
+/* Mot de passe avec icône */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    padding-right: 40px;
+}
+
+.password-wrapper i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+/* Options (Remember me / Forgot password) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+    cursor: pointer;
+}
+
+.forgot-password {
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.forgot-password:hover {
+    color: #d32f2f;
+}
+
+/* Boutons */
+.btn-primary {
+    width: 100%;
+    padding: 14px;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #c62828;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 12px;
+    background-color: #fff;
+    color: #555;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+.btn-google:hover {
+    background-color: #f1f1f1;
+}
+
+.btn-google img {
+    width: 10px;
+    height: 10px;
+}
+
+/* Texte d'inscription */
+.signup-text {
+    text-align: center;
+    font-size: 15px;
+    color: #777;
+    margin-top: 20px;
+}
+
+.signup-text a {
+    color: #e53935;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Partie Image (Droite) */
+.image-section {
+    flex: 1;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Filtre pour donner un aspect un peu illustratif/coloré */
+    filter: grayscale(20%) contrast(120%);
+}
+
+/* Responsive (Mobile) */
+@media (max-width: 768px) {
+    .login-card {
+        flex-direction: column;
+        max-width: 400px;
+    }
+    
+    .image-section {
+        display: none; /* On cache l'image sur mobile pour gagner de la place */
+    }
+
+    .form-section {
+        padding: 30px 20px;
+    }
+}

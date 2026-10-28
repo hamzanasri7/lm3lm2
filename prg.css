@@ -1,0 +1,475 @@
+/* إعدادات عامة */
+:root {
+    --bg-dark: #0a0a0a;
+    --bg-card: #141414;
+    --primary-orange: #e85d04;
+    --text-light: #ffffff;
+    --text-muted: #a0a0a0;
+    --border-color: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* التنسيقات المشتركة */
+.subtitle {
+    color: var(--primary-orange);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 25px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.highlight {
+    color: var(--primary-orange);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* الأزرار */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--primary-orange);
+    color: white;
+    border: 2px solid var(--primary-orange);
+}
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--primary-orange);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--text-light);
+    border: 1px solid var(--text-muted);
+}
+.btn-outline:hover {
+    border-color: var(--primary-orange);
+    color: var(--primary-orange);
+}
+
+.btn-dark {
+    background-color: #111;
+    color: white;
+    border: none;
+}
+.btn-dark:hover {
+    background-color: #333;
+}
+
+.full-width {
+    width: 100%;
+    display: block;
+}
+
+/* قسم الهيدر (Hero) */
+.hero {
+    display: flex;
+    min-height: 90vh;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #0a0a0a 40%, transparent 100%);
+}
+
+.hero-content {
+    flex: 1;
+    padding: 80px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin: 15px 0;
+}
+
+.hero-content p {
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.hero-buttons {
+    margin-bottom: 40px;
+}
+
+.features-row {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.feature i {
+    color: var(--primary-orange);
+    font-size: 1.5rem;
+}
+
+.hero-image {
+    flex: 1;
+    position: relative;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 40%);
+    mask-image: linear-gradient(to right, transparent, black 40%);
+}
+
+/* قسم التحولات */
+.transformations {
+    padding: 80px 5%;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 40px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-top: 5px;
+}
+
+.transformation-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.trans-card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.trans-images {
+    display: flex;
+    position: relative;
+}
+
+.img-box {
+    flex: 1;
+    position: relative;
+}
+
+.img-box img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(80%);
+}
+
+.img-box .label {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 0.7rem;
+    background: rgba(0,0,0,0.7);
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.trans-info {
+    padding: 15px;
+}
+
+.trans-info h3 {
+    font-size: 1rem;
+    display: flex;
+    justify-content: space-between;
+    font-style: normal;
+}
+
+.trans-info .weight {
+    color: var(--primary-orange);
+}
+
+.trans-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 5px;
+    font-style: normal;
+}
+
+/* قسم الأسعار */
+.pricing {
+    padding: 80px 5%;
+    background-color: #0d0d0d;
+}
+
+.section-title-center {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title-center h2 {
+    font-size: 2.5rem;
+    margin-top: 5px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.price-card {
+    background-color: var(--bg-card);
+    padding: 40px 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    position: relative;
+}
+
+.price-card.popular {
+    border: 2px solid var(--primary-orange);
+    transform: scale(1.05); /* تكبير البطاقة الأكثر شهرة */
+}
+
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-orange);
+    color: white;
+    padding: 5px 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.price-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.plan-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: normal;
+}
+
+.price-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 20px;
+}
+
+.price-card li {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.price-card li i {
+    color: var(--primary-orange);
+    margin-right: 10px;
+}
+
+/* قسم الآراء */
+.testimonials {
+    padding: 80px 5%;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.test-card {
+    background-color: var(--bg-card);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    position: relative;
+}
+
+.quote-icon {
+    color: var(--border-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.test-card p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.stars {
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.client-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.client-info span {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+/* الفوتر */
+.footer-cta {
+    background-color: var(--primary-orange);
+    padding: 40px 5%;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rocket-icon {
+    font-size: 3rem;
+    color: #fff;
+    opacity: 0.8;
+}
+
+.cta-text h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.cta-text p {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* التجاوب مع الشاشات الصغيرة */
+@media (max-width: 992px) {
+    .hero {
+        flex-direction: column;
+    }
+    .hero-image img {
+        position: relative;
+        height: 400px;
+        -webkit-mask-image: none;
+        mask-image: none;
+    }
+    .transformation-grid, .pricing-grid, .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .price-card.popular {
+        transform: scale(1);
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+    .features-row {
+        flex-wrap: wrap;
+    }
+    .transformation-grid, .pricing-grid, .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+}

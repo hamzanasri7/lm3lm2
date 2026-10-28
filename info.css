@@ -1,0 +1,290 @@
+/* --- المتغيرات العامة --- */
+:root {
+    --bg-body: #111215;
+    --bg-card: #191b20;
+    --bg-card-light: #22252b;
+    --gold-primary: #d9b447; /* اللون الذهبي */
+    --gold-hover: #f1cd62;
+    --text-white: #ffffff;
+    --text-muted: #9ba1a6;
+    --border-color: #33363d;
+}
+
+/* --- تصفير الهوامش --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    z-index: 1001;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 200;
+    font-size: 30px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* --- الحاوية الرئيسية --- */
+.profile-card {
+    background-color: var(--bg-card);
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 35px;
+    padding: 30px 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* --- الشارة العلوية --- */
+.top-badge {
+    border: 1px solid var(--gold-primary);
+    color: var(--gold-primary);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 30px;
+    background-color: rgba(217, 180, 71, 0.05);
+}
+
+.top-badge .dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--gold-primary);
+    border-radius: 50%;
+}
+
+/* --- الصورة الشخصية --- */
+.image-container {
+    position: relative;
+    margin-bottom: 35px;
+}
+
+.image-container img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 35px;
+    border: 3px solid var(--gold-primary);
+    padding: 5px;
+    background-color: var(--bg-card);
+}
+
+/* شارة الاعتماد */
+.cert-badge {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #2a2d34;
+    color: var(--gold-primary);
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    border: 1px solid var(--gold-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+/* --- أيقونات التواصل الاجتماعي --- */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--border-color);
+    color: var(--gold-primary);
+    border-color: var(--gold-primary);
+}
+
+/* --- الاسم واللقب --- */
+.name {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.title {
+    color: var(--gold-primary);
+    font-size: 40px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* --- صندوق الاقتباس --- */
+.quote-box {
+    background-color: var(--bg-card-light);
+    border-right: 4px solid var(--gold-primary);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.quote-box p {
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 600;
+    text-align: right;
+}
+
+/* --- النبذة --- */
+.bio-text {
+    color: var(--text-muted);
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.bio-text p {
+    margin-bottom: 15px;
+}
+
+/* --- الإحصائيات --- */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    background-color: var(--bg-card-light);
+}
+
+.stat-card.highlight {
+    border-color: var(--gold-primary);
+    box-shadow: inset 0 0 15px rgba(217, 180, 71, 0.05);
+}
+
+.stat-card h3 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.stat-card h3.gold-text {
+    color: var(--gold-primary);
+}
+
+.stat-card p {
+    color: var(--text-muted);
+    font-size: 20px;
+}
+
+/* --- زر التواصل --- */
+.cta-btn {
+    width: 100%;
+    background-color: var(--gold-primary);
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    padding: 18px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: var(--gold-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(217, 180, 71, 0.2);
+}
+
+.cta-btn i {
+    font-size: 20px;
+    transform: rotate(-45deg); /* تدوير أيقونة الطائرة الورقية */
+}
+
+/* --- التجاوب مع الهواتف الصغيرة --- */
+@media (max-width: 400px) {
+    .name { font-size: 1.8rem; }
+    .title { font-size: 1rem; }
+    .image-container img { width: 180px; height: 180px; }
+}
